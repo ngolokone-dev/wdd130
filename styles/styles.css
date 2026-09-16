@@ -6,12 +6,12 @@
 
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
+    line-height: 1.5;
     color: #333;
 }
 
 p {
-    padding: 0;
+    padding: 20;
 }
 
 /* Header Styles */
@@ -19,7 +19,7 @@ header {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
 }
 
 header img {
@@ -31,14 +31,14 @@ header img {
 
 /* Navigation Styles */
 nav {
-    background-color: #555;
+    background-color: darkblue;
     padding: 10px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 10px;
     display: block;
 }
 
@@ -55,7 +55,7 @@ main {
 }
 
 h1 {
-    color: #333;
+    color: darkblue;
     text-align: center;
     margin-bottom: 20px;
 }
