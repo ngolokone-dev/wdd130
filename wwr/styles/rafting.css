@@ -1,3 +1,11 @@
+:root {
+    --primary-color: #003d7a;
+    --accent1-color: #333;
+    --accent2-color: #d4a574;
+    --heading-font: Arial, sans-serif;
+    --body-font: Arial, sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -15,6 +23,8 @@ main,
 footer {
     width: 840px;
     margin: 0 auto;
+    background-color: #c8b6db;
+    text-align: center;
 }
 
 h1,
