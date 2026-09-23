@@ -23,8 +23,8 @@ main,
 footer {
     width: 840px;
     margin: 0 auto;
-    background-color: #c8b6db;
-    text-align: center;
+    background-color: #e8f0ef;
+    text-align: ;
 }
 
 h1,
@@ -121,14 +121,26 @@ nav a:hover {
     line-height: 1.5;
 }
 
+section {
+    background-color: #003d7a;
+    padding: 0;
+    margin: 20px 0;
+    border: none;
+}
+
 section h2 {
-    color: #333;
-    margin-bottom: 15px;
-    font-size: 1.8em;
+    color: white;
     text-align: center;
+    padding: 15px;
+    margin: 0;
+    background-color: #003d7a;
 }
 
 section p {
+    color: #333;
+    background-color: white;
+    padding: 20px;
+    margin: 0;
     font-size: 1em;
     line-height: 1.6;
 }
