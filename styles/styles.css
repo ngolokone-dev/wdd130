@@ -61,6 +61,8 @@ h1 {
 }
 
 main img {
+    /* you most likely will have other CSS declarations here */
+    float: right;
     width: 150px;
     height: auto;
     display: block;
@@ -74,6 +76,15 @@ main p {
     text-align: center;
     font-size: 1.1rem;
     margin-bottom: 20px;
+}
+
+/* Class Selectors */
+.box {
+    margin: 1rem;
+    border: 1px solid rgb(0 0 0 / 10%);
+    padding: 1rem;
+    background-color: #ddd;
+    color: #000;
 }
 
 /* Aside Styles */
@@ -92,10 +103,13 @@ aside h2 {
     color: #333;
     margin-top: 0;
     margin-bottom: 15px;
+    position: absolute;
+    top: 47px;
+    left: 150px;
 }
 
 aside img {
-    width: 200px;
+    width: 100px;
     height: auto;
     margin-bottom: 15px;
 }
