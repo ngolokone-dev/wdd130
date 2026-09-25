@@ -121,10 +121,13 @@ header nav a:hover {
     display: flex;
     gap: 20px;
     align-items: center;
+    display: flow-root;
 }
 
 .hero article img {
     width: 125px;
+    float: right;
+    margin-left: 20px;
 }
 
 .hero article p {
