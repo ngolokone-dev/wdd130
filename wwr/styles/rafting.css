@@ -4,7 +4,6 @@
     --heading-font: Arial, sans-serif;
     --body-font: Arial, sans-serif;
 }
-}
 
 * {
     margin: 0;
@@ -17,14 +16,13 @@ body {
     color: var(--accent1-color);
 }
 
-/* Header Styles */
+/* Largeur commune et centrage */
 header,
 main,
 footer {
-    width: 840px;
+    max-width: 840px;
     margin: 0 auto;
     background-color: #e8f0ef;
-    text-align: ;
 }
 
 h1,
@@ -41,33 +39,47 @@ article {
     padding: 8px;
 }
 
+/* ===== Header : GRID (logo à gauche, menu à droite) ===== */
+header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    padding: 16px;
+}
+
 header img {
     width: 80px;
     height: 80px;
-    margin-bottom: 15px;
     display: block;
 }
 
-nav ul {
+/* ===== Nav : FLEX (liens en ligne) ===== */
+header nav {
+    justify-self: end;
+}
+
+header nav ul {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     list-style: none;
-    gap: 10px;
 }
 
-nav a {
-    color: #0066cc;
-    text-decoration: underline;
+header nav a {
+    display: block;
+    padding: 8px 16px;
+    border: 1px solid var(--accent1-color);
+    background-color: white;
+    color: var(--primary-color);
+    text-decoration: none;
     font-weight: bold;
-    font-size: 1.1em;
 }
 
-nav a:hover {
-    color: #003d7a;
+header nav a:hover {
+    background-color: var(--primary-color);
+    color: white;
 }
 
-/* Hero Section */
-/* Hero */
+/* ===== Hero ===== */
 .hero {
     position: relative;
     border: 2px solid #333;
@@ -101,31 +113,32 @@ nav a:hover {
     left: 50%;
     transform: translateX(-50%);
     width: 85%;
+    margin: 0;
     background-color: #d4a574;
     padding: 20px;
     border: 2px solid #333;
     z-index: 10;
     display: flex;
     gap: 20px;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .hero article img {
     width: 125px;
-    float: right;
 }
 
 .hero article p {
     margin: 0;
+    padding: 0;
     font-size: 0.95em;
     line-height: 1.5;
 }
 
+/* ===== Sections (style général) ===== */
 section {
-    background-color: #003d7a;
-    padding: 0;
+    background-color: var(--primary-color);
+    padding: 0 0 16px;
     margin: 20px 0;
-    border: none;
 }
 
 section h2 {
@@ -133,7 +146,6 @@ section h2 {
     text-align: center;
     padding: 15px;
     margin: 0;
-    background-color: #003d7a;
 }
 
 section p {
@@ -141,42 +153,105 @@ section p {
     background-color: white;
     padding: 20px;
     margin: 0;
-    font-size: 1em;
     line-height: 1.6;
 }
 
+/* ===== History : texte | image | texte ===== */
+.history {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    align-items: center;
+    padding: 0 16px 16px;
+}
+
+.history h2 {
+    grid-column: 1 / 4;
+}
+
+.history img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===== Adventures : 5 images en ligne ===== */
+.adventures {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    padding: 0 16px 16px;
+}
+
+.adventures h2 {
+    grid-column: 1 / 6;
+}
+
+.adventures figure {
+    background-color: white;
+    padding: 6px;
+}
+
+.adventures img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    display: block;
+}
+
+.adventures figcaption {
+    text-align: center;
+    font-size: 0.85em;
+    padding-top: 6px;
+}
+
+/* ===== Footer : icônes à droite ===== */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+}
+
 footer p {
-    margin-bottom: 20px;
-    font-size: 1em;
-    color: #333;
+    margin: 0;
 }
 
 .socialmedia {
+    margin: 0;
+    padding: 0;
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    justify-content: flex-end;
+    gap: 12px;
 }
 
 .socialmedia a {
-
     text-decoration: none;
 }
 
 .socialmedia img {
-    width: 50px;
-    height: 50px;
-    border: 2px solid #333;
+    width: 40px;
+    height: 40px;
+    display: block;
 }
 
 .socialmedia a:hover {
     transform: scale(1.1);
 }
 
-/* Responsive Design */
+/* ===== Petits écrans ===== */
 @media (max-width: 768px) {
+    header {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    header nav {
+        justify-self: center;
+    }
+
     .hero article {
         flex-direction: column;
-        align-items: center;
         text-align: center;
     }
 
@@ -184,8 +259,19 @@ footer p {
         font-size: 1.5em;
     }
 
-    section {
-        margin: 10px;
-        padding: 20px;
+    .history {
+        grid-template-columns: 1fr;
+    }
+
+    .history h2 {
+        grid-column: 1;
+    }
+
+    .adventures {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .adventures h2 {
+        grid-column: 1 / 3;
     }
 }
