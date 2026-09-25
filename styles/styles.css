@@ -141,6 +141,7 @@ footer p {
 /* Responsive Design */
 @media (max-width: 768px) {
     aside {
+        float: none;
         margin: 20px 0;
         width: 20rem;
         position: relative;
