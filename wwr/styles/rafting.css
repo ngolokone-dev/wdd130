@@ -449,4 +449,61 @@ footer p {
     .employee-container {
         grid-template-columns: 1fr;
     }
+
+    /* ===== NEWSLETTER ===== */
+
+    .newsletter {
+        background-color: white;
+        border: 2px solid var(--primary-color);
+        padding: 20px;
+        margin: 20px 16px;
+        text-align: center;
+    }
+
+    .newsletter h2 {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 15px;
+        margin: -20px -20px 15px;
+    }
+
+    .newsletter p {
+        background-color: transparent;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .newsletter form {
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        gap: 12px;
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    .newsletter label {
+        font-weight: bold;
+        align-self: center;
+    }
+
+    .newsletter input {
+        padding: 10px;
+        border: 1px solid #999;
+        font-family: var(--body-font);
+    }
+
+    .newsletter button {
+        grid-column: 1 / 3;
+        padding: 10px;
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .newsletter button:hover {
+        background-color: #002b55;
+    }
 }
