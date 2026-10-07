@@ -362,6 +362,145 @@ section p {
     font-weight: bold;
 }
 
+/* ================================================= */
+/* ================== NEWSLETTER =================== */
+/* ================================================= */
+
+.newsletter {
+    background-color: white;
+    border: 2px solid var(--primary-color);
+    padding: 20px;
+    margin: 20px 16px;
+    text-align: center;
+}
+
+.newsletter h2 {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px;
+    margin: -20px -20px 15px;
+}
+
+.newsletter p {
+    background-color: transparent;
+    color: var(--accent1-color);
+    padding: 10px;
+    margin: 10px;
+}
+
+.newsletter form {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 12px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.newsletter label {
+    font-weight: bold;
+    align-self: center;
+}
+
+.newsletter input {
+    padding: 10px;
+    border: 1px solid #999;
+    font-family: var(--body-font);
+}
+
+.newsletter button {
+    grid-column: 1 / 3;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.newsletter button:hover {
+    background-color: #002b55;
+}
+
+/* ================================================= */
+/* =================== HOME GRID =================== */
+/* ================================================= */
+
+.home-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 20px 16px;
+    padding: 20px;
+    background-color: white;
+}
+
+.home-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    align-items: center;
+    border: 1px solid #999;
+    padding: 15px;
+    background-color: #f5f5f5;
+}
+
+.home-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.home-card h2 {
+    color: var(--primary-color);
+    margin: 0 0 10px;
+    padding: 0;
+    background-color: transparent;
+    text-align: left;
+}
+
+.home-card p {
+    color: var(--accent1-color);
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    line-height: 1.5;
+}
+
+.home-cta {
+    grid-column: 1 / 3;
+    text-align: center;
+    background-color: var(--primary-color);
+    padding: 25px;
+}
+
+.home-cta h2 {
+    color: white;
+    margin: 0 0 10px;
+    padding: 0;
+    background-color: transparent;
+}
+
+.home-cta p {
+    background-color: transparent;
+    color: white;
+    margin: 0 0 15px;
+    padding: 0;
+}
+
+.home-cta a {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: white;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.home-cta a:hover {
+    background-color: #ddd;
+}
+
 /* ===== FOOTER ===== */
 
 footer {
@@ -450,60 +589,27 @@ footer p {
         grid-template-columns: 1fr;
     }
 
-    /* ===== NEWSLETTER ===== */
-
-    .newsletter {
-        background-color: white;
-        border: 2px solid var(--primary-color);
-        padding: 20px;
-        margin: 20px 16px;
-        text-align: center;
-    }
-
-    .newsletter h2 {
-        background-color: var(--primary-color);
-        color: white;
-        padding: 15px;
-        margin: -20px -20px 15px;
-    }
-
-    .newsletter p {
-        background-color: transparent;
-        padding: 10px;
-        margin: 10px;
-    }
+    /* ===== NEWSLETTER MOBILE ===== */
 
     .newsletter form {
-        display: grid;
-        grid-template-columns: 100px 1fr;
-        gap: 12px;
-        max-width: 600px;
-        margin: 0 auto;
-        text-align: left;
-    }
-
-    .newsletter label {
-        font-weight: bold;
-        align-self: center;
-    }
-
-    .newsletter input {
-        padding: 10px;
-        border: 1px solid #999;
-        font-family: var(--body-font);
+        grid-template-columns: 1fr;
     }
 
     .newsletter button {
-        grid-column: 1 / 3;
-        padding: 10px;
-        background-color: var(--primary-color);
-        color: white;
-        border: none;
-        font-weight: bold;
-        cursor: pointer;
+        grid-column: 1;
     }
 
-    .newsletter button:hover {
-        background-color: #002b55;
+    /* ===== HOME GRID MOBILE ===== */
+
+    .home-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .home-card {
+        grid-template-columns: 1fr;
+    }
+
+    .home-cta {
+        grid-column: 1;
     }
 }
